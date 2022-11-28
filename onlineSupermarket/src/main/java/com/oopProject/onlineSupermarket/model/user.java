@@ -12,6 +12,7 @@ public class user {
     protected String address;
     protected String emailId;
     private String password;
+    public double walletBalance=1000;
 
 
     public void setPhoneNumber(long phoneNumber) {
@@ -35,19 +36,36 @@ public class user {
         }
     }
 
-    public void login(){
+    public void login(String userId, String password){
         //get data using JS
-        //check data to mongoDb table users
+        String passkey = "";
+        try{
+            passkey=toHexString(getSHA(password));}
+        catch (NoSuchAlgorithmException e) {
+            System.out.println("Exception thrown for incorrect algorithm: " + e);
+        }
+        //check userId data to mongodb table users
+        //check for passkey for corresponding user if matches
+        //return to login page if check fails
     }
-    public void registerCustomer(){
+    protected void registerCustomer(String userName, String userId, long phoneNumber, String address, String emailId, String password){
         //get data using JS
-        //push data to mongoDb table users
+        //wrap data into a new object using user newUser= new user;
+        user newUser= new user(userName, userId, phoneNumber, address, emailId, password);
+        //push object into mongodb table users
+        //return to registerCustomer page if login fails
     }
-    protected void updateProfile(){
-        //take the field to be edited and update
+    protected void updatePhone(String userId, long newPhoneNumber){
+        //update phone field for that particular user
     }
-    protected void deleteProfile(){
-        //deletes that particular user from mongo
+    protected void updateEmail(String userId, String newEmail){
+        //update Email field for that particular user
+    }
+    protected void updateAddress(String userId, String newAddress){
+        //update Address field for that particular user
+    }
+    protected void deleteProfile(String userId){
+        //deletes that particular user from mongodb
     }
     protected void passwordChange(){
         //get input of new password
