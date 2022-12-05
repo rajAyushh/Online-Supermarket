@@ -1,0 +1,7 @@
+.walletbank{
+    height: 60vh;
+    margin: 30px auto;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.277);
+}

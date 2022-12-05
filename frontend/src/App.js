@@ -12,6 +12,9 @@ import Footer from './components/Footer';
 import ProductPage from './pages/ProductPage';
 import CategoryProducts from './pages/CategoryProducts';
 import Navigbar from './components/Navbar';
+import Cartpage from './components/Cartpage';
+import Payment from './pages/Payment';
+import Wallet from './pages/Wallet';
 
 function App() {
   let [isLogin, setIsLogin] = useState(false)
@@ -24,6 +27,9 @@ function App() {
         <Route path="/" element={<Login/>}/>
         <Route path="/register" element={<Signup/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/cart" element={<Cartpage/>}/>
+        <Route path="/payment" element={<Payment/>}/>
+        <Route path='/wallet' element={<Wallet/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
       </Routes>

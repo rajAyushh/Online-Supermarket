@@ -10,7 +10,7 @@ export default function Navigbar() {
     <>
       <div className='Navbar'>
         <div className="logo">
-          CompanyLOGO
+        <Link to="/home" style={{color: "white", textDecoration: 'none'}}>CompanyLOGO</Link>
         </div>
         <div className="search">
           <input type="text" placeholder='Search'/>
@@ -18,8 +18,10 @@ export default function Navigbar() {
         </div>
         <div className='InnerNav'>
           <ul>
-            <Link to="/home" style={{textDecoration: "none"}}><li>Home</li></Link>
-            <li><i class="bi bi-cart"></i></li>
+            <Link to="/home" style={{textDecoration: "none"}}><li><i class="bi bi-bookmark-heart"></i></li></Link>
+            {/* <Link to="/home" style={{textDecoration: "none"}}><li><i class="bi bi-house"></i></li></Link> */}
+            <Link to="/cart" style={{textDecoration: "none"}}><li><i class="bi bi-cart"></i></li></Link>
+            <Link to="/wallet" style={{textDecoration: "none"}}><li><i class="bi bi-wallet"></i></li></Link>
             <li><i class="bi bi-gear"></i></li>
           </ul>
         </div>
