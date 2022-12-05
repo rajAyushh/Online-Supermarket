@@ -1,0 +1,45 @@
+.mainpage{
+    /* position: relative; */
+    min-height: 50vh;
+    display: flex;
+}
+
+.heading{
+    font-size: 22px;
+    border-bottom: 4px solid rgb(255, 191, 0);
+    width: 280px;
+    margin: 2rem 40px;
+    padding-bottom: 5px;
+}
+
+.filter{
+    /* position: fixed; */
+    background-color: blanchedalmond;
+    padding: 10px 20px;
+    margin: auto 2rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+}
+
+.filter input {
+    margin: 0 10px;
+}
+
+.filter p {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.productsinfo{
+    /* margin-left: 350px; */
+    /* margin-right: 50px; */
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-wrap: wrap;
+}
