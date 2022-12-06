@@ -17,6 +17,7 @@ import Payment from './pages/Payment';
 import Wallet from './pages/Wallet';
 import Profile from './pages/Profile';
 import Orders from './pages/Orders';
+import ManagerProfile from './pages/ManagerProfile';
 
 function App() {
   let [isLogin, setIsLogin] = useState(false)
@@ -34,6 +35,7 @@ function App() {
         <Route path='/wallet' element={<Wallet/>}/>
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        <Route path='/manager' element={<ManagerProfile/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
       </Routes>

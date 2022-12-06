@@ -13,6 +13,7 @@ export default function SideBar() {
                 <li><Link to='/profile' className='sidelink' style={{textDecoration: 'none', color:'black'}}>Edit Profile</Link></li>
                 <li><Link to='/orders' className='sidelink' style={{textDecoration: 'none', color:'black'}}>View Orders</Link></li>
                 <li><Link to='/wallet' className='sidelink' style={{textDecoration: 'none', color:'black'}}>Wallet</Link></li>
+                <li><Link className='sidelink' style={{textDecoration: 'none', color:'red', marginRight:'8px'}}>Delete Account</Link></li>
             </ul>
         </div>
     </div>

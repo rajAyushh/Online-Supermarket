@@ -24,7 +24,7 @@ export default function Cartpage() {
             <p>Item Quantity: ${arr[i].quantity}</p>
             </div>
             <div class = "cartpart2">
-            Amount: ${totalvalue}
+            Amount: $${totalvalue}
             </div>
             </div>`
             console.log(arr[i])
