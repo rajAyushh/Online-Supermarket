@@ -40,6 +40,7 @@
     margin-right: 20px;
     float: right;
     height: inherit;
+    position: relative;
     /* margin-top: auto; */
 }
 
@@ -54,9 +55,50 @@
 .InnerNav li{
     cursor: pointer;
     list-style: none;
-    padding: 6px 12px;
-    margin: 1px 8px;
+    padding: 10px 12px;
+    margin: -3px 8px;
     color: white;
     /* background-color: pink; */
     font-size: 18px;
+}
+
+.dropdown{
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    width: 150px;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 14px;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.374);
+}
+
+.gear:hover .dropdown{
+    display: flex;
+    /* transform: translateY(10px) */
+}
+
+
+.dropdown span{
+    width: 150px;
+    background: white;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dropdown span:hover .link{
+    color: white;
+}
+.dropdown span:hover{
+    background: #000;
+}
+
+.link{
+    color: black;
+    /* padding: 10px 10px; */
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
 }

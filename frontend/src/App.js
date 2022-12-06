@@ -15,6 +15,8 @@ import Navigbar from './components/Navbar';
 import Cartpage from './components/Cartpage';
 import Payment from './pages/Payment';
 import Wallet from './pages/Wallet';
+import Profile from './pages/Profile';
+import Orders from './pages/Orders';
 
 function App() {
   let [isLogin, setIsLogin] = useState(false)
@@ -30,6 +32,8 @@ function App() {
         <Route path="/cart" element={<Cartpage/>}/>
         <Route path="/payment" element={<Payment/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/orders' element={<Orders/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
       </Routes>

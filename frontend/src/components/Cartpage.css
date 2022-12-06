@@ -2,16 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 50px auto;
+    margin: 30px auto;
+}
+
+.cartName{
+    font-size: 23px;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+.cartName i{
+    padding: 0 10px;
 }
 
 .arritems{
     height: 15vh;
-    margin: 10px 30px;
+    margin: 10px auto;
+    width: 40vw; 
     text-align: left;
-    background-color: antiquewhite;
+    /* background-color: rgb(92, 195, 255); */
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.185);
     display: flex;
+    border-radius: 10px;
     justify-content: space-between;
+}
+
+.cartpart1{
+    margin: 10px 20px;
 }
 
 .arritems p{

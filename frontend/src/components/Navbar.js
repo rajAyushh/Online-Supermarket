@@ -18,11 +18,18 @@ export default function Navigbar() {
         </div>
         <div className='InnerNav'>
           <ul>
-            <Link to="/home" style={{textDecoration: "none"}}><li><i class="bi bi-bookmark-heart"></i></li></Link>
+            <Link style={{textDecoration: "none"}}><li><i class="bi bi-bookmark-heart"></i></li></Link>
             {/* <Link to="/home" style={{textDecoration: "none"}}><li><i class="bi bi-house"></i></li></Link> */}
             <Link to="/cart" style={{textDecoration: "none"}}><li><i class="bi bi-cart"></i></li></Link>
             <Link to="/wallet" style={{textDecoration: "none"}}><li><i class="bi bi-wallet"></i></li></Link>
-            <li><i class="bi bi-gear"></i></li>
+            <li className='gear'><i class="bi bi-gear"></i>
+            <div className="dropdown">
+              <span><Link to='/profile' className='link' style={{textDecoration: "none"}}>Profile</Link></span>
+              <span><Link to='/orders' className='link' style={{textDecoration: "none"}}>Orders</Link></span>
+              <span><Link className='link' style={{textDecoration: "none"}}>Logout</Link></span>
+            </div>
+            
+            </li>
           </ul>
         </div>
       </div>

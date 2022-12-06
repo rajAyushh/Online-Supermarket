@@ -16,14 +16,15 @@ export default function Cartpage() {
         var cartItemsRetreieved = JSON.parse(retrievedData);
         for(let i=0 ; i<cartItemsRetreieved.length; i++){
             arr.push(cartItemsRetreieved[i]);
-            value += cartItemsRetreieved[i].price;
+            value += cartItemsRetreieved[i].price*cartItemsRetreieved[i].quantity;
+            let totalvalue = arr[i].price*arr[i].quantity;
             document.getElementById('cartitems').innerHTML += `<div class="arritems">
             <div class="cartpart1">
             <p>Item Name: ${arr[i].name}</p>
             <p>Item Quantity: ${arr[i].quantity}</p>
             </div>
             <div class = "cartpart2">
-            Amount: ${arr[i].price}
+            Amount: ${totalvalue}
             </div>
             </div>`
             console.log(arr[i])
@@ -40,7 +41,8 @@ export default function Cartpage() {
     }else{
         return (
             <>
-    <div style={{minHeight: "60vh", margin: "30px auto", width:"80vw"}}>
+    <div style={{minHeight: "60vh", margin: "30px auto", width:"80vw", display:'flex', flexDirection: "column", justifyContent:"center"}}>
+    <div className='cartName'><i className="bi bi-cart-fill"></i>Cart Items</div>
     <div id="cartitems">
         {/* {console.log(arr)}
         {arr.map((i)=>{
@@ -49,7 +51,7 @@ export default function Cartpage() {
         <Plate/> */}
     </div>
     <div >
-    <div className='cartamount' style={{textAlign: 'right'}}>
+    <div className='cartamount'>
         Total Amount: ${Tamount}
     </div>
     <button className="buynow" onClick={()=>{navigate("/payment")}}>
