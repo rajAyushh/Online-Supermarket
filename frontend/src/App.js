@@ -23,6 +23,8 @@ import AddCategory from './pages/AddCategory';
 import AddProduct from './pages/AddProduct';
 import UpdateProduct from './pages/UpdateProduct';
 import ViewItems from './pages/ViewItems';
+import ViewItems_admin from './pages/ViewItems_admin';
+import ManageUsers from './pages/ManageUsers';
 
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
         <Route path='/updateproduct' element={<UpdateProduct/>}/>
         <Route path='/manager' element={<ManagerProfile/>}/>
         <Route path='/admin' element={<AdminProfile/>}/>
+        <Route path='/admin/manageusers' element={<ManageUsers/>}/>
+        <Route path='/admin/viewitems' element={<ViewItems_admin/>}/>
         <Route path='/viewitems' element={<ViewItems/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
