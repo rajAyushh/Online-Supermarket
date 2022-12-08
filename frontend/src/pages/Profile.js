@@ -11,8 +11,7 @@ export default function Profile() {
     <div style={{ display: "flex" }}>
       <SideBar />
       <div className="profilecard">
-
-        <div className="usericon"></div>
+      <h1>Edit Profile</h1>
         <Form className="my-3">
           <Form.Group className="mb-3 w-50 m-auto" controlId="formBasicName">
             <Form.Label>Name</Form.Label>
