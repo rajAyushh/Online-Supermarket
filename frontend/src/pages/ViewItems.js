@@ -23,7 +23,7 @@ export default function ViewItems() {
         <h1>My Products</h1>
         <div className="viewitemsmain">
           {products.map((item) => {
-            {console.log(item.product_name)}
+            // {console.log(item.product_name)}
             return(
                 <div class="productcards" key={item.product_id}>
                 <div className="productimg">
@@ -48,7 +48,7 @@ export default function ViewItems() {
                   <button
                     className="editbutton"
                     onClick={() => {
-                      navigate("/updateproduct");
+                      navigate(`/updateproduct/edit?id=${item.product_id}`);
                     }}
                   >
                     Edit Product

@@ -25,6 +25,7 @@ import UpdateProduct from './pages/UpdateProduct';
 import ViewItems from './pages/ViewItems';
 import ViewItems_admin from './pages/ViewItems_admin';
 import ManageUsers from './pages/ManageUsers';
+import Report from './reports'
 
 
 function App() {
@@ -45,12 +46,13 @@ function App() {
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/addcategory' element={<AddCategory/>}/>
         <Route path='/addproduct' element={<AddProduct/>}/>
-        <Route path='/updateproduct' element={<UpdateProduct/>}/>
+        <Route path='/updateproduct/edit' element={<UpdateProduct/>}/>
         <Route path='/manager' element={<ManagerProfile/>}/>
         <Route path='/admin' element={<AdminProfile/>}/>
         <Route path='/admin/manageusers' element={<ManageUsers/>}/>
         <Route path='/admin/viewitems' element={<ViewItems_admin/>}/>
         <Route path='/viewitems' element={<ViewItems/>}/>
+        <Route path='/generatereport' element={<Report/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
       </Routes>

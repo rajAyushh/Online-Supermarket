@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link , useNavigate} from "react-router-dom";
 import "./ProductPage.css";
 
-export default function ProductPage(props) {
+export default function ProductPage() {
   let { category, product } = useParams();
   // console.log(useParams())
   // let {itemname, itemid, url} = props;
@@ -57,14 +57,14 @@ function cartAddition(product, itemprice,navigate){
     alert('Value cannot be 0');
   }else{
     var retrievedData = localStorage.getItem("cartItems");
-    var cartItemsRetreieved = JSON.parse(retrievedData);
-    console.log(cartItemsRetreieved)
     navigate("/cart")
-    if(cartItemsRetreieved == null || cartItemsRetreieved == 0){
+    if(retrievedData == null || retrievedData == undefined){
       arr.push(newValue);
       addtoLocal(arr);
     }
     else{
+      var cartItemsRetreieved = JSON.parse(retrievedData);
+      console.log(cartItemsRetreieved)
       for(let i=0 ; i<cartItemsRetreieved.length; i++){
         arr.push(cartItemsRetreieved[i]);
       }

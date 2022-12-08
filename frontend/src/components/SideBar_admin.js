@@ -12,7 +12,7 @@ export default function SideBar_admin() {
         <div className='sidebar'>
             <ul>
                 <li><Link to='/admin' className='sidelink' style={{textDecoration: 'none', color:'black'}}>Edit Profile</Link></li>
-                <li><Link className='sidelink' style={{textDecoration: 'none', color:'black'}}>Generate Report</Link></li>
+                <li><Link to='/generatereport' className='sidelink' style={{textDecoration: 'none', color:'black'}}>Generate Report</Link></li>
                 <li><Link to='/admin/viewitems' className='sidelink' style={{textDecoration: 'none', color:'black'}}>View Items</Link></li>
                 {/* <li><Link className='sidelink' style={{textDecoration: 'none', color:'black'}}>Add Category</Link></li> */}
                 {/* <li><Link className='sidelink' style={{textDecoration: 'none', color:'black'}}>Add Item</Link></li> */}

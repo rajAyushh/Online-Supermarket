@@ -3,12 +3,16 @@ import axios from "axios";
 
 import { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import SideBar_manager from "../components/SideBar_manager";
 
-export default function UpdateProduct() {
+export default function UpdateProduct(props) {
   let navigate = useNavigate();
-
+  // const [product, setProduct] = useState(second)
+  const query = new URLSearchParams(useLocation().search);
+  const id = query.get("id");
+  let isTrue=false;
+  
   const [product, setProduct] = useState({
     product_name: "",
     price: "",
@@ -17,9 +21,21 @@ export default function UpdateProduct() {
     discount: "",
     product_url: "",
     days_to_deliver: "",
+    stock: ""
   });
 
-  const { product_name, price, desc, discount, product_url, days_to_deliver } =
+  useEffect(() => {
+    getProductDetails();
+  }, [])
+
+  const getProductDetails = async () => {
+    const res = await axios.get(`http://localhost:8080/product/${id}`);
+    setProduct(res.data);
+    console.log(res.data)
+  }
+  
+
+  const { product_name, price, desc, discount, product_url, days_to_deliver, stock} =
     product;
 
   const [categories, setCategories] = useState([]);
@@ -80,7 +96,7 @@ export default function UpdateProduct() {
                 <label style={{ marginTop: "2rem" }}>Price</label>
                 <input
                   style={{ width: "30vw" }}
-                  type="number"
+                  type="text"
                   value={price}
                   name="price"
                   onChange={(e) => onInputChange(e)}
@@ -100,12 +116,16 @@ export default function UpdateProduct() {
                 <label style={{ marginTop: "2rem" }}>Category</label>
                 <div>
                   {categories.map((category) => {
+                    if(category.cat_name == product.category) 
+                    {isTrue=true}
+                    else{isTrue=false}
                     return (
                       <>
                         <input
                           type="radio"
                           value={category.cat_name}
                           name="category"
+                          checked={isTrue}
                           onChange={(e) => onInputChange(e)}
                           style={{
                             margin: "12px 10px",
@@ -138,7 +158,7 @@ export default function UpdateProduct() {
                   placeholder="Enter the url for product image"
                 />
 
-                <label style={{ marginTop: "2rem" }}>Days to Deliver</label>
+                <label style={{ marginTop: "2rem" }}>Days to Deliver: </label>
                 <input
                   style={{ width: "30vw" }}
                   type="number"
@@ -146,6 +166,16 @@ export default function UpdateProduct() {
                   name="days_to_deliver"
                   onChange={(e) => onInputChange(e)}
                   placeholder="Enter the number of days for delivery"
+                />
+
+                <label style={{ marginTop: "2rem" }}>Stock: </label>
+                <input
+                  style={{ width: "30vw" }}
+                  type="number"
+                  value={stock}
+                  name="stock"
+                  onChange={(e) => onInputChange(e)}
+                  placeholder="Enter the stock available"
                 />
               </div>
               <div style={{ marginTop: "2rem" }}>
