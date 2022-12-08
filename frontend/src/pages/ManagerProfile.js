@@ -5,6 +5,7 @@ import SideBar_manager from '../components/SideBar_manager'
 import {Link} from "react-router-dom";
 
 export default function ManagerProfile() {
+  
   let navigate = useNavigate();
 
   
