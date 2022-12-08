@@ -149,10 +149,10 @@ export default function UpdateProduct() {
                 />
               </div>
               <div style={{ marginTop: "2rem" }}>
-                <button type="submit" onClick={handleSubmit}>
+                <button className="addcatbutton"  type="submit" onClick={handleSubmit}>
                   Submit
                 </button>
-                <button
+                <button className="addcatbutton" 
                   style={{ marginLeft: "10px", marginBottom: "30px" }}
                   onClick={handleCancel}
                 >

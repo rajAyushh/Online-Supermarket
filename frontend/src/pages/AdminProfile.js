@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import SideBar_manager from '../components/SideBar_manager'
+import SideBar_admin from '../components/SideBar_admin'
 import {Link} from "react-router-dom";
 
 export default function ManagerProfile() {
@@ -28,7 +28,7 @@ export default function ManagerProfile() {
 
   return (
     <div style={{ display: "flex" }}>
-        <SideBar_manager/>
+        <SideBar_admin/>
         <div className="profilecard">
         <h1>Edit Profile</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -89,8 +89,8 @@ export default function ManagerProfile() {
                 />
             </div>
             <div style={{marginTop:'2rem'}}>
-                <button className="addcatbutton"  type="submit" onClick={handleSubmit}>Submit</button>
-                <button className="addcatbutton"  style={{marginLeft:'10px', marginBottom:'30px'}} onClick={handleCancel}>Cancel</button>
+                <button type="submit" onClick={handleSubmit}>Submit</button>
+                <button style={{marginLeft:'10px', marginBottom:'30px'}} onClick={handleCancel}>Cancel</button>
             </div>
             </form>
        </div>

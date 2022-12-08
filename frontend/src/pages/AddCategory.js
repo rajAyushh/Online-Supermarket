@@ -67,7 +67,7 @@ export default function AddCategory() {
                 name='cat_url'
                 onChange={(e) => handleChange(e)}
             />
-            <Button className='my-4' variant="primary" type="submit">Submit</Button>
+            <button className='addcatbutton' type="submit">Submit</button>
         </form>
         </div>
         </div>

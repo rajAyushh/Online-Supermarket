@@ -11,6 +11,9 @@
     font-size: 16px;
     height: 40px;
     vertical-align: middle;
+    padding-right: 10px;
+    width: 140px;
+    margin-left: -12px;
     /* background: rgb(218, 163, 163); */
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.16); */
 }

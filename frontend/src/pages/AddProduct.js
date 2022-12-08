@@ -143,8 +143,8 @@ export default function AddProduct () {
                 />
             </div>
             <div style={{marginTop:'2rem'}}>
-                <button type="submit" onClick={handleSubmit}>Submit</button>
-                <button style={{marginLeft:'10px', marginBottom:'30px'}} onClick={handleCancel}>Cancel</button>
+                <button className="addcatbutton" type="submit" onClick={handleSubmit}>Submit</button>
+                <button className="addcatbutton" style={{marginLeft:'10px', marginBottom:'30px'}} onClick={handleCancel}>Cancel</button>
             </div>
             </form>
         </div>

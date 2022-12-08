@@ -18,9 +18,11 @@ import Wallet from './pages/Wallet';
 import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import ManagerProfile from './pages/ManagerProfile';
+import AdminProfile from './pages/AdminProfile';
 import AddCategory from './pages/AddCategory';
 import AddProduct from './pages/AddProduct';
 import UpdateProduct from './pages/UpdateProduct';
+import ViewItems from './pages/ViewItems';
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
         <Route path='/addproduct' element={<AddProduct/>}/>
         <Route path='/updateproduct' element={<UpdateProduct/>}/>
         <Route path='/manager' element={<ManagerProfile/>}/>
+        <Route path='/admin' element={<AdminProfile/>}/>
+        <Route path='/viewitems' element={<ViewItems/>}/>
         <Route path="/categories/:category" element={<CategoryProducts/>}/>
         <Route path="/categories/:category/:product" element={<ProductPage/>}/>
       </Routes>
